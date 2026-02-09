@@ -6,7 +6,7 @@ External monitoring for the OpenClaw system via a Raspberry Pi.
 
 The scout is a lightweight daemon running on a separate device (Raspberry Pi) that monitors the main OpenClaw system from the outside. It detects outages, watches for changes, and sends Telegram alerts independently — it works even when the Mac Mini is completely down.
 
-**Repo**: [BigDawg013/clawpi-scout](https://github.com/BigDawg013/clawpi-scout)
+**Repo**: [clawpi-scout](https://github.com/your-username/clawpi-scout)
 
 ## Why a separate device?
 
@@ -20,20 +20,20 @@ The Mac Mini can't tell you it's down. A scout on a separate device can:
 ## Network topology
 
 ```
-Mac Mini (bigs-mac-mini)
+Mac Mini (<mac-mini-hostname>)
 ├── OpenClaw Gateway (ws://127.0.0.1:18789)
-├── Tailscale Serve → https://bigs-mac-mini.tail*.ts.net
-└── Tailscale IP: 100.75.53.90
+├── Tailscale Serve → https://<hostname>.<tailnet>.ts.net
+└── Tailscale IP: <mac-mini-tailscale-ip>
 
             │ Tailscale (encrypted, no port forwarding)
 
-Raspberry Pi (clawpi)
+Raspberry Pi (<pi-hostname>)
 ├── clawpi-scout daemon (systemd)
-├── Tailscale IP: 100.107.226.78
-└── @clawpi_scout_bot (Telegram)
+├── Tailscale IP: <pi-tailscale-ip>
+└── @your_scout_bot (Telegram)
 ```
 
-The gateway only listens on `127.0.0.1`. Tailscale Serve exposes it securely to the tailnet at `https://bigs-mac-mini.tail*.ts.net`. Only devices on the tailnet can reach it.
+The gateway only listens on `127.0.0.1`. Tailscale Serve exposes it securely to the tailnet. Only devices on the tailnet can reach it.
 
 ## Capabilities
 
@@ -50,7 +50,7 @@ The gateway only listens on `127.0.0.1`. Tailscale Serve exposes it securely to 
 Gateway down for 3 min
   → clawpi-scout detects failure
     → Telegram Bot API (direct, not via OpenClaw)
-      → @clawpi_scout_bot sends alert to your chat
+      → Scout bot sends alert to your chat
 
 Gateway recovers
   → clawpi-scout detects recovery
@@ -59,7 +59,7 @@ Gateway recovers
 
 ## Setup
 
-Full setup guide: [clawpi-scout/docs/SETUP.md](https://github.com/BigDawg013/clawpi-scout/blob/main/docs/SETUP.md)
+Full setup guide: [clawpi-scout/docs/SETUP.md](https://github.com/your-username/clawpi-scout/blob/main/docs/SETUP.md)
 
 Quick version:
 1. Flash Raspberry Pi OS to SD card
