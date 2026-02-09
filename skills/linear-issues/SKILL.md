@@ -1,5 +1,5 @@
 ---
-name: linear
+name: linear-issues
 description: Manage Linear issues — create, update, search, and triage tickets. Use when working with project management, sprint planning, or issue tracking.
 metadata: {"openclaw": {"emoji": "📋", "requires": {"env": ["LINEAR_API_KEY"]}, "primaryEnv": "LINEAR_API_KEY"}}
 ---

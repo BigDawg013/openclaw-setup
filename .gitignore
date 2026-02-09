@@ -1,0 +1,31 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# OpenClaw runtime
+*.bak
+*.sock
+credentials/
+paired.json
+pending.json
+auth-profiles.json
+jobs.json
+heartbeat-state.json
+
+# Dependencies
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+/tmp/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

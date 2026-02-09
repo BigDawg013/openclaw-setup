@@ -59,10 +59,15 @@ agents/
   coder/            IDENTITY.md, SOUL.md
   brain/            IDENTITY.md, SOUL.md
 skills/
-  linear/           SKILL.md
-  vercel-deploy/    SKILL.md
-  deep-research/    SKILL.md
+  linear-issues/       SKILL.md
+  vercel-deploy/       SKILL.md
+  deep-research-pro/   SKILL.md
   playwright-testing/  SKILL.md
+  web-scraper/         SKILL.md
+  automation-workflows/ SKILL.md
+  artifacts-builder/   SKILL.md
+  mcp-builder/         SKILL.md
+  doc-coauthoring/     SKILL.md
 docs/
   ARCHITECTURE.md   System design, cost model, data flow
   ORCHESTRATION.md  Agent coordination patterns
